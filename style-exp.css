@@ -29,11 +29,14 @@ img {
 
 .library {
     display: grid;
-    margin: 1vh 1vh;
-    grid-template-columns: repeat(3, 20fr);
-    gap: 1vh;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* This is better for small screens, once min() is better supported */
+    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    gap: 1rem;
+    margin: 3vh;
 }
 
+    
 .dummy-card {
     background-color: bisque;
     border: 1px solid black;
@@ -41,3 +44,12 @@ img {
     
     /*margin: 1vh;*/
 }
+
+
+@media (min-width:600px) {
+    .library{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        /*transform: scale(5);*/
+    }
+}
+
