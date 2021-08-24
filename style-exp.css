@@ -29,7 +29,7 @@ img {
 
 .library {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     /* This is better for small screens, once min() is better supported */
     /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
     gap: 1rem;
@@ -45,11 +45,15 @@ img {
     /*margin: 1vh;*/
 }
 
-
-@media (min-width:600px) {
-    .library{
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        /*transform: scale(5);*/
-    }
+.book-info {
+    text-align: center;
 }
 
+/*
+@media (width: <= 600px) {
+    .library{
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        font-size: 3.5vw;
+    }
+}
+*/
