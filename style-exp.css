@@ -23,8 +23,23 @@ img {
 }
 
 /*^^^RESET^^^*/
+body {
+    background-color: #673AB7;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
 .top {
     text-align: center;
+    background-color: #512DA8 ;
+    padding: 1vw;
+}
+
+.new-book {
+    background-color: #CDDC39;
+    
 }
 
 .library {
@@ -38,7 +53,7 @@ img {
 
     
 .dummy-card {
-    background-color: bisque;
+    background-color: #D1C4E9;
     border: 1px solid black;
     border-radius: 7px;
     padding: 1vw;
