@@ -23,12 +23,19 @@ img {
 }
 
 /*^^^RESET^^^*/
+
+/*
+https://www.materialpalette.com/deep-purple/lime
+*/
+
 body {
     background-color: #673AB7;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     color: #FFFFFF;
+    font-size: 5vw;
 }
 
 .top {
@@ -38,8 +45,12 @@ h1 {
 }
 
 .new-book {
-    background-color: #CDDC39;
-    
+    color: #757575;
+    background-color: hsl(99, 100%, 69%);
+    border-color: hsl(99, 100%, 69%);
+    border-radius: 7px;
+    box-shadow: 1px;
+    padding: .5vw 1vw;
 }
 
 .library {
