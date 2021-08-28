@@ -35,7 +35,7 @@ body {
 
 h1 {
     color: #FFFFFF;
-    font-size: 5vw;
+    font-size: 10vh;
 }
 
 .top {
@@ -44,21 +44,30 @@ h1 {
     padding: 1vw;
 }
 
-.new-book {
+.new-book, .book-button {
     color: #000;
-    background-image: linear-gradient(to top right, hsl(99, 100%, 69%), #FFF);
-    border-radius: 7px;
+    background-image: linear-gradient(to top right, hsl(99, 100%, 69%), rgb(251, 251, 193));
+    border-radius: 15px;
+    border-width: 1px;
     box-shadow: 1px;
-    padding: .5vw 1vw;
     width: 25%;
     font-weight: 900;
+}
+
+.new-book {
+    padding: 1vh;
+    border-radius: 25px;
+    font-size: 2vh;
+}
+
+.book-button{
+    padding: .5vw 1vw;
+    
 }
 
 .library {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    /* This is better for small screens, once min() is better supported */
-    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
     gap: 1rem;
     margin: 3vh;
 }
@@ -77,21 +86,11 @@ h1 {
     padding: .5vw;
 }
 
-.book-button {
-    /*background-color: #D1C4E9;*/
-    background-image: linear-gradient(to top right, hsl(99, 100%, 69%), #FFF);
-    border-radius: 7px;
-    border-style: solid 1px;
-    width: 25%;
-    font-weight: 900;
-    color: #000;
-}
 
 /*
-@media (width: <= 600px) {
-    .library{
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-        font-size: 3.5vw;
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 10vw;
     }
 }
 */
