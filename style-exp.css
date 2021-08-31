@@ -44,7 +44,7 @@ h1 {
     padding: 1vw;
 }
 
-.new-book, .book-button {
+.submit-button, .book-button {
     color: #000;
     background-image: linear-gradient(to top right, hsl(99, 100%, 69%), rgb(251, 251, 193));
     border-radius: 15px;
@@ -54,7 +54,7 @@ h1 {
     font-weight: 900;
 }
 
-.new-book {
+.submit-button {
     padding: 1vh;
     border-radius: 25px;
     font-size: 2vh;
@@ -85,7 +85,6 @@ h1 {
     text-align: center;
     padding: .5vw;
 }
-
 
 /*
 @media (max-width: 1000px) {
