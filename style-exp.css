@@ -44,6 +44,19 @@ h1 {
     padding: 1vw;
 }
 
+.text-field {
+    width: 25%;
+    background-color: #D1C4E9;
+    margin: 1vh;
+    border: none;
+    
+}
+
+::placeholder{
+    color: black;
+    text-align: center;
+}
+
 .submit-button, .book-button {
     color: #000;
     background-image: linear-gradient(to top right, hsl(99, 100%, 69%), rgb(251, 251, 193));
@@ -86,10 +99,5 @@ h1 {
     padding: .5vw;
 }
 
-/*
-@media (max-width: 1000px) {
-    h1 {
-        font-size: 10vw;
-    }
-}
-*/
+
+
