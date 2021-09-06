@@ -24,6 +24,7 @@
  const modal = document.querySelector(".modal");
  const trigger = document.querySelector(".submit-button");
  const closeButton = document.querySelector(".close-button");
+ const confirmButton = document.querySelector(".confirm-button");
 
  function toggleModal() {
      modal.classList.toggle("show-modal");
@@ -37,12 +38,15 @@
 
  trigger.addEventListener("click", toggleModal);
  closeButton.addEventListener("click", toggleModal);
+ confirmButton.addEventListener("click", toggleModal);
  window.addEventListener("click", windowOnClick);
 
 
 /***************************************************
  * LIBRARY
  */
+
+let myLibrary = [];
 
 function Book(title, author, totalPages, read){
     this.title = title;
