@@ -46,24 +46,45 @@
  * LIBRARY
  */
 
-let myLibrary = [];
+
 
 function Book(title, author, totalPages, read){
     this.title = title;
     this.author = author;
     this.totalPages = totalPages;
+}
+  
+Book.prototype.info = function(read){
+  if(read === true){
+    read = 'You read it'
+  }else{
+    read = 'You haven\'t read it'
   }
-  
-  Book.prototype.info = function(read){
-    if(read === true){
-      read = 'You read it'
-    }else{
-      read = 'You haven\'t read it'
-    }
-    return `${this.title}, ${this.author}, ${this.totalPages}, ${read}`
-  }
+  return `${this.title}, ${this.author}, ${this.totalPages}, ${read}`
+}
   
   
-  const book1 = new Book('IQ84', 'Murakami', '534', true);
-  const book2 = new Book('The Bible', 'Who knows', '999', false);
+const book1 = new Book('IQ84', 'Murakami', '534', true);
+const book2 = new Book('The Bible', 'Who knows', '999', false);
 
+let myLibrary = [book1, book2];
+
+/*
+Write a function that loops through the array and displays each book on the page. 
+
+var parentElement = book-info // i need to give these three names i think
+
+add child div to parent element with Book.
+
+*/
+
+
+function addBookToLibrary(){
+  let authorParent = document.querySelector('.author');
+  let titleParent = document.querySelector('.title');
+  let pagesParent = document.querySelector('.pages');  
+}
+
+addBookToLibrary();
+
+console.log(myLibrary[0])
