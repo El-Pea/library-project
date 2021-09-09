@@ -80,9 +80,16 @@ add child div to parent element with Book.
 
 
 function addBookToLibrary(){
-  let authorParent = document.querySelector('.author');
-  let titleParent = document.querySelector('.title');
-  let pagesParent = document.querySelector('.pages');  
+  const libraryElement = document.querySelector('.library');
+  libraryElement
+              .appendChild(document.createElement('div'))
+              .className = 'card';
+  const card = document.querySelector('.card');
+  card  
+      .appendChild(document.createElement('div'))
+      .className = 'author';
+
+
 }
 
 addBookToLibrary();
