@@ -78,12 +78,13 @@ add child div to parent element with Book.
 
 */
 
-
+/*
 function addBookToLibrary(){
   const libraryElement = document.querySelector('.library');
   libraryElement
               .appendChild(document.createElement('div'))
               .className = 'card';
+
   const card = document.querySelector('.card');
   card  
       .appendChild(document.createElement('div'))
@@ -91,6 +92,22 @@ function addBookToLibrary(){
 
 
 }
+*/
+
+function addBookToLibrary(){
+  const libraryElement = document.querySelector('.library');
+  let fragment = document.createDocumentFragment();
+  let book = myLibrary;
+
+  fragment
+        .appendChild(document.createElement('div'))
+        .className = 'card';
+  
+  libraryElement.appendChild(fragment);
+
+};
+
+// here try this: https://stackoverflow.com/questions/47763249/creating-nested-divs-using-javascript
 
 addBookToLibrary();
 
