@@ -117,6 +117,7 @@ h1 {
 }
 
 .book-button{
+    margin: 1.5vw;
     padding: .5vw 1vw;
     
 }
@@ -136,11 +137,6 @@ h1 {
     border-radius: 7px;
     padding: 1vw;
     /*margin: 1vh;*/
-}
-
-.book-info, .book-button {
-    text-align: center;
-    padding: .5vw;
 }
 
 

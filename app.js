@@ -94,6 +94,7 @@ function addBookToLibrary(){
 }
 */
 
+/*
 function addBookToLibrary(){
   const libraryElement = document.querySelector('.library');
   let fragment = document.createDocumentFragment();
@@ -106,9 +107,26 @@ function addBookToLibrary(){
   libraryElement.appendChild(fragment);
 
 };
+*/
+
+
+
+function addBookToLibrary(){
+  const libraryElement = document.querySelector('.library');
+  let book = myLibrary;
+  let cardDiv = document.createElement('div');
+  let authorParentDiv = document.createElement('div');
+  let authorDiv = document.createElement('div');
+  
+
+
+  
+
+}
+// https://www.reddit.com/r/javascript/comments/5lcc98/issues_with_creating_divs_dynamically_and_nesting/
 
 // here try this: https://stackoverflow.com/questions/47763249/creating-nested-divs-using-javascript
 
 addBookToLibrary();
 
-console.log(myLibrary[0])
+console.log(myLibrary[0]);
