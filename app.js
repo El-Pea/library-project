@@ -71,62 +71,42 @@ let myLibrary = [book1, book2];
 
 /*
 Write a function that loops through the array and displays each book on the page. 
-
-var parentElement = book-info // i need to give these three names i think
-
-add child div to parent element with Book.
-
 */
 
-/*
+function makeCard(){
+  const libraryElement = document.querySelector('.library');;
+  let cardDiv = document.createElement('div');
+  let authorDiv = document.createElement('div');
+  let author = document.createElement('div');
+  let titleDiv = document.createElement('div');
+  let title = document.createElement('div');
+  let pagesDiv = document.createElement('div');
+  let pages = document.createElement('div');
+  let readDiv = document.createElement('div');
+  let removeButton = document.createElement('button');
+
+  libraryElement.appendChild(cardDiv);
+  cardDiv.append(authorDiv, author, titleDiv, title, pagesDiv, pages, readDiv, removeButton);  
+
+  cardDiv.className = 'card';
+  authorDiv.className = 'author';
+  titleDiv.className = 'title';
+  pagesDiv.className = 'pages';
+  readDiv.className = 'read';
+  removeButton.className = 'book-button';
+
+  authorDiv.textContent = 'Author:';
+  titleDiv.textContent = 'Title:';
+  pagesDiv.textContent = 'Pages:';
+  readDiv.textContent = 'Read:';
+  removeButton.textContent = 'Remove';
+};
+
 function addBookToLibrary(){
-  const libraryElement = document.querySelector('.library');
-  libraryElement
-              .appendChild(document.createElement('div'))
-              .className = 'card';
-
-  const card = document.querySelector('.card');
-  card  
-      .appendChild(document.createElement('div'))
-      .className = 'author';
-
-
-}
-*/
-
-/*
-function addBookToLibrary(){
-  const libraryElement = document.querySelector('.library');
-  let fragment = document.createDocumentFragment();
-  let book = myLibrary;
-
-  fragment
-        .appendChild(document.createElement('div'))
-        .className = 'card';
-  
-  libraryElement.appendChild(fragment);
 
 };
-*/
-
-
-
-function addBookToLibrary(){
-  const libraryElement = document.querySelector('.library');
-  let book = myLibrary;
-  let cardDiv = document.createElement('div');
-  let authorParentDiv = document.createElement('div');
-  let authorDiv = document.createElement('div');
-  
-
-
-  
-
-}
-// https://www.reddit.com/r/javascript/comments/5lcc98/issues_with_creating_divs_dynamically_and_nesting/
-
-// here try this: https://stackoverflow.com/questions/47763249/creating-nested-divs-using-javascript
-
-addBookToLibrary();
+ 
+makeCard();
+makeCard();
 
 console.log(myLibrary[0]);
