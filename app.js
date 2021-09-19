@@ -1,23 +1,3 @@
-/*
- function Book(title, author, totalPages, read){
-   this.title = title;
-   this.author = author;
-   this.totalPages = totalPages;
-   this.read = null;
-   this.info = function(){
-     if(read === true){
-        read = 'You read it'
-      }else{
-        read = 'You haven\'t read it'
-      }
-     return `${title}, ${author}, ${totalPages}, ${read}`
-   }
- }
-
- const book1 = new Book('IQ84', 'Murakami', '534', true);
- const book2 = new Book('The Bible', 'Who knows', '999', false);
-*/
-
 /***************************************************
  * MODAL
  */
@@ -41,17 +21,15 @@
  confirmButton.addEventListener("click", toggleModal);
  window.addEventListener("click", windowOnClick);
 
-
 /***************************************************
  * LIBRARY
  */
-
-
 
 function Book(title, author, totalPages, read){
     this.title = title;
     this.author = author;
     this.totalPages = totalPages;
+    this.read = read;
 }
   
 Book.prototype.info = function(read){
@@ -60,18 +38,22 @@ Book.prototype.info = function(read){
   }else{
     read = 'You haven\'t read it'
   }
-  return `${this.title}, ${this.author}, ${this.totalPages}, ${read}`
+  return read;
 }
   
   
 const book1 = new Book('IQ84', 'Murakami', '534', true);
 const book2 = new Book('The Bible', 'Who knows', '999', false);
+const book3 = new Book('The Gunslinger', 'Stephen King', '243', true);
+const book4 = new Book('Manhattan Chowder', 'Fran Leibowitz', '11', false);
 
-let myLibrary = [book1, book2];
+let myLibrary = [book1, book2, book3, book4];
 
 /*
 Write a function that loops through the array and displays each book on the page. 
 */
+
+let idCount = 0;
 
 function makeCard(){
   const libraryElement = document.querySelector('.library');;
@@ -88,11 +70,14 @@ function makeCard(){
   libraryElement.appendChild(cardDiv);
   cardDiv.append(authorDiv, author, titleDiv, title, pagesDiv, pages, readDiv, removeButton);  
 
+  idCount++;
+  cardDiv.id = `card-${idCount}`;
+  author.id = `author-${idCount}`;
+  title.id = `title-${idCount}`;
+  pages.id = `pages-${idCount}`;
+  readDiv.id = `readDiv-${idCount}`;
+
   cardDiv.className = 'card';
-  authorDiv.className = 'author';
-  titleDiv.className = 'title';
-  pagesDiv.className = 'pages';
-  readDiv.className = 'read';
   removeButton.className = 'book-button';
 
   authorDiv.textContent = 'Author:';
@@ -103,10 +88,24 @@ function makeCard(){
 };
 
 function addBookToLibrary(){
-
+  myLibrary.forEach((book) =>{
+    makeCard();
+    document.getElementById(`author-${idCount}`).textContent = book.author;
+    document.getElementById(`title-${idCount}`).textContent = book.title;
+    document.getElementById(`pages-${idCount}`).textContent = book.totalPages;
+    document.getElementById(`readDiv-${idCount}`).textContent = book.info();
+  });
 };
- 
+
+addBookToLibrary();
+
+/*
+makeCard();
+makeCard();
 makeCard();
 makeCard();
 
-console.log(myLibrary[0]);
+document.getElementById('author-1').textContent = book1.title;
+*/
+
+console.log(myLibrary);
