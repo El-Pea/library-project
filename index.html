@@ -15,23 +15,13 @@
         <h1>Library</h1>  
         <div class="input-fields">
             <div class="modal">
-                <div class="modal-content">
-                    <div>
-                        <div class="close-button">&times;</div>
-                    </div>
-                    <div>
-                        <input class="text-field" type="text" name="author-name-input" placeholder="Author">
-                    </div>
-                    <div>
-                        <input class="text-field" type="text" name="book-title-input" placeholder="Title">
-                    </div>
-                    <div>
-                        <input class="text-field" type="text" placeholder="Page Number">
-                    </div>
-                    <div>
-                        <button class="confirm-button">Confirm New Book</button>
-                    </div>
-                </div>
+                <form class="modal-content">
+                    <div class="close-button">&times;</div>
+                    <input class="text-field" id="author-input" type="text" name="author-name-input" placeholder="Author">
+                    <input class="text-field" id="title-input" type="text" name="book-title-input" placeholder="Title">
+                    <input class="text-field" id= page-input type="text" placeholder="Page Number">
+                    <button class="confirm-button">Confirm New Book</button>
+                </form>
             </div>  
         </div>
         <!--.modal-->
