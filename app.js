@@ -31,16 +31,31 @@ function Book(title, author, totalPages, read){
     this.totalPages = totalPages;
     this.read = read;
 }
-  
-Book.prototype.info = function(read){
-  if(read === true){
-    read = 'You read it'
+
+//https://stackoverflow.com/questions/31714434/declaring-vs-initializing-a-variable 
+
+// declared manually that readStatus is undefined (check my premise)
+Book.prototype.info = function(){
+  let readStatus = undefined;
+  if(this.read){
+    readStatus = 'You read it'
   }else{
-    read = 'You haven\'t read it'
+    readStatus = 'You haven\'t read it'
   }
-  return read;
+  return readStatus;
 }
-  
+
+// protocol initializies readStatus as undefined. 
+/*
+Book.prototype.info = function(readStatus){
+  if(this.read){
+    readStatus = 'You read it'
+  }else{
+    readStatus = 'You haven\'t read it'
+  }
+  return readStatus;
+}
+*/
   
 const book1 = new Book('IQ84', 'Murakami', '534', true);
 const book2 = new Book('The Bible', 'Who knows', '999', false);
