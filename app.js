@@ -45,22 +45,11 @@ Book.prototype.info = function(){
   return readStatus;
 }
 
-// protocol initializies readStatus as undefined. 
-/*
-Book.prototype.info = function(readStatus){
-  if(this.read){
-    readStatus = 'You read it'
-  }else{
-    readStatus = 'You haven\'t read it'
-  }
-  return readStatus;
-}
-*/
-  
-const book1 = new Book('IQ84', 'Murakami', '534', true);
-const book2 = new Book('The Bible', 'Who knows', '999', false);
-const book3 = new Book('The Gunslinger', 'Stephen King', '243', true);
-const book4 = new Book('Manhattan Chowder', 'Fran Leibowitz', '11', false);
+let book1 = new Book('dr no', 'James Bond Is Hot', '999', false); 
+let book2 = new Book('dr no', 'Oddjob was quite plain', '999', true); 
+let book3 = new Book('dr no', 'Why are all the women hot', '999', false);
+let book4 = new Book('dr no', 'James Bond Would Have Not Liked The Internet', '999', true);
+
 
 let myLibrary = [book1, book2, book3, book4];
 
@@ -112,15 +101,23 @@ function addBookToLibrary(){
   });
 };
 
+function getBook(){
+
+  
+  let authorInput = document.getElementById('author-input').value;
+  let titleInput = document.getElementById('title-input').value;
+  let pageInput = document.getElementById('page-input').value;
+  parseInt(pageInput);
+
+  let book = new Book(authorInput,titleInput,pageInput);
+  
+
+  // let book = new Book('Dr Tooth.', 'Brush Your Teeth', '1', true);
+
+  myLibrary.push(book);
+};
+
+const submitButton = document.querySelector('.confirm-button');
+submitButton.addEventListener('click', getBook());
+
 addBookToLibrary();
-
-/*
-makeCard();
-makeCard();
-makeCard();
-makeCard();
-
-document.getElementById('author-1').textContent = book1.title;
-*/
-
-console.log(myLibrary);
