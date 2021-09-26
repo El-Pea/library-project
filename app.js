@@ -34,7 +34,6 @@ function Book(title, author, totalPages, read){
 
 //https://stackoverflow.com/questions/31714434/declaring-vs-initializing-a-variable 
 
-// declared manually that readStatus is undefined (check my premise)
 Book.prototype.info = function(){
   let readStatus = undefined;
   if(this.read){
@@ -109,15 +108,14 @@ function getBook(){
   let pageInput = document.getElementById('page-input').value;
   parseInt(pageInput);
 
-  let book = new Book(authorInput,titleInput,pageInput);
+  //let book = new Book(authorInput,titleInput,pageInput);
   
-
-  // let book = new Book('Dr Tooth.', 'Brush Your Teeth', '1', true);
+  let book = new Book('Dr Tooth.', 'Brush Your Teeth', '1', true);
 
   myLibrary.push(book);
 };
 
 const submitButton = document.querySelector('.confirm-button');
-submitButton.addEventListener('click', getBook());
+submitButton.addEventListener('click', getBook);
 
 addBookToLibrary();
